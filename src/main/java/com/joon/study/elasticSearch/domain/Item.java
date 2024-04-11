@@ -1,10 +1,9 @@
 package com.joon.study.elasticSearch.domain;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
@@ -16,18 +15,25 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @Builder
 @Getter
+@Data
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "item_id")
-    private Long id;
+    private String id;
+
+    @Field(type = FieldType.Long, index = false, docValues = false)
+    private Long itemId;
 
     @Column(nullable = false, length = 300)
+    @Field(type = FieldType.Text, analyzer = "nori")
     private String name;
 
     @Column(length = 6)
+    @Field(type = FieldType.Long, index = false)
     private Integer stock;
 
+    @Field(type = FieldType.Long, index = false)
     private Long price;
 }
