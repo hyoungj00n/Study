@@ -1,4 +1,4 @@
-package com.joon.study.elasticSearch.config;
+package org.test.elasticSearch.config;
 
 import org.elasticsearch.client.RestHighLevelClient;
 import org.springframework.context.annotation.Configuration;

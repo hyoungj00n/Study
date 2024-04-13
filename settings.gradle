@@ -1,1 +1,8 @@
 rootProject.name = 'study'
+include 'module-rest'
+include 'module-common'
+include 'module-rest'
+include 'module-api'
+include 'module-api'
+include 'module-batch'
+

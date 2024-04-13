@@ -1,4 +1,4 @@
-package com.joon.study.elasticSearch.domain;
+package org.test.elasticSearch.domain;
 
 import lombok.*;
 import org.springframework.data.elasticsearch.annotations.Document;

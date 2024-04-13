@@ -1,12 +1,12 @@
-package com.joon.study.elasticSearch.service;
+package org.test.elasticSearch.service;
 
-import com.joon.study.elasticSearch.domain.Item;
-import com.joon.study.elasticSearch.repository.ItemElasticSearchRepository;
 
 import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.test.elasticSearch.domain.Item;
+import org.test.elasticSearch.repository.ItemElasticSearchRepository;
 
 import java.util.List;
 
